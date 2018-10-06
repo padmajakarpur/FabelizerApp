@@ -1,0 +1,27 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <!--text size-->
+    <dimen name="TextSize_10">10sp</dimen>
+    <dimen name="TextSize_12">12sp</dimen>
+    <dimen name="TextSize_14">14sp</dimen>
+    <dimen name="TextSize_16">16sp</dimen>
+    <dimen name="TextSize_20">20sp</dimen>
+    <dimen name="TextSize_24">24sp</dimen>
+
+    <!--margin-->
+    <dimen name="Margin_2">2dp</dimen>
+    <dimen name="Margin_3">3dp</dimen>
+    <dimen name="Margin_4">4dp</dimen>
+    <dimen name="Margin_5">5dp</dimen>
+    <dimen name="Margin_6">6dp</dimen>
+    <dimen name="Margin_10">10dp</dimen>
+    <dimen name="Margin_15">15dp</dimen>
+    <dimen name="Margin_20">20dp</dimen>
+    <dimen name="Margin_25">25dp</dimen>
+    <dimen name="Margin_30">30dp</dimen>
+    <dimen name="Margin_35">35dp</dimen>
+    <dimen name="Margin_40">40dp</dimen>
+    <dimen name="Margin_45">45dp</dimen>
+    <dimen name="Margin_50">50dp</dimen>
+    <dimen name="Margin_100">100dp</dimen>
+</resources>

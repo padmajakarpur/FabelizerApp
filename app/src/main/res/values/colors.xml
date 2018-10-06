@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008080</color>
+    <color name="colorPrimaryDark">#008080</color>
+    <color name="colorAccent">#008080</color>
+
+    <color name="shadow">#555555</color>
+    <color name="title">#777777</color>
+
+
+
+
+
+        <color name="action_bar_color">#ED2026</color>
+        <color name="status_bar_color">#d12126</color>
+        <color name="search_bar_color">#F1EBED</color>
+
+
+
+        <color name="white">#FFFFFF</color>
+        <color name="transparent">#00000000</color>
+        <color name="blue_txt_bottom">#6da2ff</color>
+        <color name="yellow">#FFFF44</color>
+        <color name="yellow_btn">#ebe313</color>
+        <color name="fuchsia">#FF00FF</color>
+        <color name="red">#FF0000</color>
+        <color name="silver">#C0C0C0</color>
+        <color name="gray">#808080</color>
+        <color name="light_gray">#D3D3D3</color>
+        <color name="lightest_gray">#f4eeee</color>
+        <color name="trans_gray">#EDEDED</color>
+        <color name="olive">#808000</color>
+        <color name="purple">#800080</color>
+        <color name="maroon">#800000</color>
+        <color name="aqua">#00FFFF</color>
+        <color name="lime">#00FF00</color>
+        <color name="teal">#008080</color>
+        <color name="green">#008000</color>
+        <color name="light_green">#00BF68</color>
+        <color name="green_leads">#FF95EF1F</color>
+        <color name="green_btn">#26B99A</color>
+        <color name="blue_btn">#1E88E5</color>
+        <color name="blue">#0000FF</color>
+        <color name="navy">#000080</color>
+        <color name="black">#000000</color>
+        <color name="blue1">#FF424293</color>
+        <color name="reg_back_blue">#55a2db</color>
+        <color name="log_txt_red">#cc412a</color>
+        <color name="purple_pros">#FF854AE4</color>
+
+        <color name="back_red_top">#d42622</color>
+        <color name="back_red_bottom">#ea6f3a</color>
+
+        <color name="btn_back_blue_top">#3391da</color>
+        <color name="btn_back_blue_bottom">#83c2e5</color>
+        <color name="blue_action">#4ac7cd</color>
+
+        <color name="back_black_top">#292929</color>
+        <color name="back_black_bottom">#000000</color>
+        <color name="translucent_black">#40000000</color>
+
+        <color name="list_selected_bg_color">#D9D9D9</color>
+        <color name="orange_btn_sel">#ff5719</color>
+        <color name="facility_blue_back_top">#54d5bc</color>
+        <color name="facility_blue_back_bottom">#31b7a7</color>
+
+        <color name="blue_btn_top">#35a6e6</color>
+        <color name="blue_btn_bottom">#5fc5ff</color>
+        <color name="sky_blue">#00BFFF</color>
+        <color name="blak_btn">#2d2d2d</color>
+        <color name="lightshadegreen">#07c99f</color>
+        <color name="bookingDash">#FF47E4DC</color>
+        <color name="payout">#e9442a</color>
+
+        //navigation colors
+        <color name="home">#66023c</color>
+
+        <color name="signout">#ea5959</color>
+
+        <color name="my_leads">#00ccff</color>
+
+        <color name="my_visits">#ffc057</color>
+
+        <color name="my_bookings">#9966cc</color>
+
+        <color name="marketing_material">#00cccc</color>
+        <color name="facebook">#395697</color>
+
+        <!--for home-->
+        <color name="leads">#2b6b96</color>
+        <color name="dashboard">#FFD500</color>
+        <color name="bookings">#DC7633</color>
+        <color name="marketng">#008CCF</color>
+        <color name="account">#006600</color>
+        <color name="logout">#EEA1B423</color>
+
+    </resources>
+
+

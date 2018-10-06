@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<resources>
+
+
+    <!--Customize your theme here.-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:typeface">monospace</item>
+
+        <!--<item name="alertDialogProTheme">@style/MyAlertDialogProTheme</item>-->
+
+    </style>
+
+    <!--<style name="MyAlertDialogProTheme" parent="Theme.AlertDialogPro.Material.Light">-->
+    <!--<item name="android:windowBackground">@color/black</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme.NoActionBar">
+
+        <item name="windowActionBar">false</item>
+
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+
+    -
+
+    <style name="DialogAnimation" parent="android:Theme.Dialog">
+
+        <item name="android:windowFrame">@null</item>
+
+        <item name="android:windowExitAnimation">@anim/trans_right_out</item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    -
+
+    <style name="DialogAnimation_2">
+
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+
+        <item name="android:windowExitAnimation">@anim/slide_bottom</item>
+
+    </style>
+
+
+    -
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+
+        <item name="android:textSize">14sp</item>
+
+        <item name="android:textAllCaps">false</item>
+
+    </style>
+    <!--for custom textview-->
+    <declare-styleable name="CustomView">
+        <attr name="customFont" format="string"></attr>
+        <attr name="setAlpha" format="boolean"></attr>
+    </declare-styleable>
+
+    <style name="spinnerItemStyle" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="spinnerDropDownItemStyle">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="TextInputLayout" parent="Widget.Design.TextInputLayout">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/teal</item>
+        <item name="android:textSize">14sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/red</item>
+        <item name="colorControlNormal">@color/teal</item>
+        <item name="colorControlActivated">@color/teal</item>
+    </style>
+
+    <style name="TransparentProgressDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+
+    </style>
+
+</resources>

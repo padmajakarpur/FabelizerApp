@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/Margin_10"
+        android:orientation="horizontal"
+        android:background="@color/teal">
+        <ImageView
+            android:id="@+id/img_bck_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"/>
+        <com.infinitum.fabelizerapp.CustomView.CustomTextView
+            android:id="@+id/txt_create_leads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            app:customFont="@string/str_font_semibold"
+            android:textStyle="bold"
+            android:text="Register"
+            android:layout_marginLeft="@dimen/Margin_10" />
+
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profile_reg"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/mybookingsbg"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="1dp" />
+            <ImageView
+                android:id="@+id/img_camera_reg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="50dp"
+                android:layout_alignRight="@id/img_profile_reg"
+                android:layout_alignBottom="@id/img_profile_reg"
+                android:src="@drawable/ic_menu_camera"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+            <com.infinitum.fabelizerapp.CustomView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                android:text="Enter Name"
+                app:customFont="@string/str_font_regular"
+                />
+            <com.infinitum.fabelizerapp.CustomView.CustomEditText
+                android:id="@+id/edt_name_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="@dimen/TextSize_14"
+                android:maxLines="1"
+                android:inputType="text"
+                app:customFont="@string/str_font_regular"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:backgroundTint="@color/gray" />
+
+            <com.infinitum.fabelizerapp.CustomView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                app:customFont="@string/str_font_regular"
+                android:text="Enter Address"
+                />
+            <com.infinitum.fabelizerapp.CustomView.CustomEditText
+                android:id="@+id/edt_address_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="@dimen/TextSize_14"
+                android:maxLines="1"
+                android:inputType="text"
+                app:customFont="@string/str_font_regular"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:backgroundTint="@color/gray" />
+
+            <com.infinitum.fabelizerapp.CustomView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                app:customFont="@string/str_font_regular"
+                android:text="Enter Mobile"
+                />
+            <com.infinitum.fabelizerapp.CustomView.CustomEditText
+                android:id="@+id/edt_mob_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="@dimen/TextSize_14"
+                android:maxLines="1"
+                android:inputType="number"
+                android:maxLength="10"
+                app:customFont="@string/str_font_regular"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:backgroundTint="@color/gray" />
+
+            <com.infinitum.fabelizerapp.CustomView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                app:customFont="@string/str_font_regular"
+                android:text="Enter Age"
+                />
+            <com.infinitum.fabelizerapp.CustomView.CustomEditText
+                android:id="@+id/edt_age_reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="@dimen/TextSize_14"
+                android:maxLines="1"
+                android:inputType="text"
+                app:customFont="@string/str_font_regular"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:backgroundTint="@color/gray" />
+
+            <com.infinitum.fabelizerapp.CustomView.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                app:customFont="@string/str_font_regular"
+                android:text="Enter Email/Username"
+                />
+            <com.infinitum.fabelizerapp.CustomView.CustomEditText
+                android:id="@+id/edt_email_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="@dimen/TextSize_14"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
+                app:customFont="@string/str_font_regular"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:backgroundTint="@color/gray" />
+
+            <com.infinitum.fabelizerapp.CustomView.CustomTextView
+                android:textSize="@dimen/TextSize_14"
+                android:layout_gravity="center"
+                app:customFont="@string/str_font_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:text="Password *"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <com.infinitum.fabelizerapp.CustomView.CustomEditText
+                    android:id="@+id/edt_pass_reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:textSize="@dimen/TextSize_14"
+                    android:maxLines="1"
+                    app:customFont="@string/str_font_regular"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    app:backgroundTint="@color/gray" />
+
+                <ImageView
+                    android:id="@+id/img_pass_reg"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/edt_pass_reg"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_remove_gray_eye" />
+                <ImageView
+                    android:id="@+id/img_pass_hide_reg"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:visibility="visible"
+                    android:layout_alignBottom="@+id/edt_pass_reg"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_eye_off_512" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.infinitum.fabelizerapp.CustomView.CustomButton
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textSize="14sp"
+            android:layout_margin="20dp"
+            android:textColor="@color/white"
+            android:background="@color/teal"
+            app:customFont="@string/str_font_semibold"/>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

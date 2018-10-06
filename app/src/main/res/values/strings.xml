@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">FabelizerApp</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="title_logo">NATIONAL GEOGRAPHIC</string>
+    <string name="btn_skip_intro">Skip Intro</string>
+    <string name="title_activity_login">ActivityLogin</string>
+
+    <string name="str_font_light">open-sans.light.ttf</string>
+    <string name="str_font_regular">open-sans.regular.ttf</string>
+    <string name="str_font_semibold">open-sans.semibold.ttf</string>
+    <string name="title_activity_register">ActivityRegister</string>
+    <string name="title_activity_dash_board">ActivityDashBoard</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="str_array_fabelizer">
+
+        <item>Home</item>
+        <item>BenchMark</item>
+        <item>Media</item>
+        <item>My Referrences</item>
+        <item>Skin Features</item>
+        <item>Language</item>
+        <item>Profile</item>
+        <item>Download</item>
+        <item>Log Out</item>
+    </string-array>
+
+
+    <string-array name="str_arr_image_option">
+        <item>Select Camera</item>
+        <item>select gallery</item>
+        <item>Cancel</item>
+    </string-array>
+    <string name="title_activity_forgot_password">ActivityForgotPassword</string>
+</resources>
