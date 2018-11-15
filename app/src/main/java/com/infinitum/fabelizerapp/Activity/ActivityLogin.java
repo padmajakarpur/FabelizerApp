@@ -41,6 +41,7 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
         mTxtReg.setOnClickListener(this);
         mBtnlogin.setOnClickListener(this);
         mTxtForgot.setOnClickListener(this);
+
     }
 
     @Override

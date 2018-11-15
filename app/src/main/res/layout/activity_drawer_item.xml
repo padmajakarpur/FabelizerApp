@@ -3,35 +3,43 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="10dp"
+
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingLeft="10dp">
-    <RelativeLayout
+   >
+    <LinearLayout
         android:id="@+id/layout_menu_icon"
         android:layout_width="match_parent"
-        android:layout_margin="5dp"
+
+        android:padding="@dimen/Margin_5"
         android:layout_height="wrap_content" >
 
         <ImageView
             android:id="@+id/img_nav_item_menu"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:visibility="visible"
             android:src="@drawable/ic_menu_camera"
             />
         <TextView
             android:id="@+id/tv_nav_item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="sdsf"
+            android:text=""
             android:layout_toRightOf="@id/img_nav_item_menu"
             android:textColor="#000"
-            android:layout_margin="10dp"
+            android:layout_weight="0.6"
+            android:layout_margin="7dp"
             android:textSize="14sp"
             />
-
-    </RelativeLayout>
+        <ImageView
+            android:id="@+id/img_nav_item_menu1"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:visibility="visible"
+            android:src="@drawable/ic_arrow"
+            />
+    </LinearLayout>
 
 
 </LinearLayout>

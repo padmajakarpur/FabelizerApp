@@ -1,5 +1,6 @@
 package com.infinitum.fabelizerapp.Activity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
@@ -13,6 +14,7 @@ import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
+import com.google.android.youtube.player.YouTubeStandalonePlayer;
 import com.infinitum.fabelizerapp.Config;
 import com.infinitum.fabelizerapp.R;
 import com.infinitum.fabelizerapp.Utils.FullScreenHelper;
@@ -33,14 +35,18 @@ public class MainActivity extends YouTubeBaseActivity implements OnInitializedLi
     YouTubePlayerView youTubePlayerView;
 //    private FullScreenHelper fullScreenHelper = new FullScreenHelper(this);
     private YouTubePlayer youtubeplayer;
+    private String videoID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // attaching layout xml
         setContentView(R.layout.activity_main);
-
-
+//get the video id
+        videoID = getIntent().getStringExtra("video_id");
+        // Initializing YouTube player view
+        youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_view);
+        youTubePlayerView.initialize(Config.DEVELOPER_KEY, this);
 
     }
 
@@ -52,32 +58,54 @@ public class MainActivity extends YouTubeBaseActivity implements OnInitializedLi
     @Override
     public void onInitializationSuccess(Provider provider, final YouTubePlayer player, boolean wasRestored) {
         youtubeplayer=player;
-        if(null== player) return;
+        if(null== player)
+            return;
 
         // Start buffering
         if (!wasRestored) {
-            player.cueVideo(Config.YOUTUBE_VIDEO_CODE);
+//            player.cueVideo(Config.YOUTUBE_VIDEO_CODE,0);
+            player.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
+            player.loadVideo(videoID);
         }
-        addFullScreenListenerToPlayer(player);
+//        addFullScreenListenerToPlayer(player);
         // Add listeners to YouTubePlayer instance
-        player.setPlayerStateChangeListener(new PlayerStateChangeListener() {
-            @Override public void onAdStarted() { }
-            @Override public void onError(ErrorReason arg0) { }
-            @Override public void onLoaded(String arg0) { }
-            @Override public void onLoading() { }
-            @Override public void onVideoEnded() { }
-            @Override public void onVideoStarted() { }
-        });
-
-
-        player.setPlaybackEventListener(new PlaybackEventListener() {
-            @Override public void onBuffering(boolean arg0) { }
-            @Override public void onPaused() { }
-            @Override public void onPlaying() { }
-            @Override public void onSeekTo(int arg0) { }
-            @Override public void onStopped() { }
-        });
+//        player.setPlayerStateChangeListener(new PlayerStateChangeListener() {
+//            @Override public void onAdStarted() { }
+//            @Override public void onError(ErrorReason arg0) { }
+//            @Override public void onLoaded(String arg0) { }
+//            @Override public void onLoading() { }
+//            @Override public void onVideoEnded() { }
+//            @Override public void onVideoStarted() { }
+//        });
+//
+//
+//        player.setPlaybackEventListener(new PlaybackEventListener() {
+//            @Override public void onBuffering(boolean arg0) { }
+//            @Override public void onPaused() { }
+//            @Override public void onPlaying() { }
+//            @Override public void onSeekTo(int arg0) { }
+//            @Override public void onStopped() { }
+//        });
     }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        //Checks the orientation of the screen
+        if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT)
+        {
+
+        }
+        else if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE)
+        {
+            //standalone is for betterment of screen landscape mode
+
+//            Intent intent = YouTubeStandalonePlayer.createVideoIntent(this, Config.DEVELOPER_KEY, videoID);
+//            startActivity(intent);
+            youtubeplayer.loadVideo(videoID);
+        }
+    }
+
     //method for fullscreen
     private void addFullScreenListenerToPlayer(final YouTubePlayer youTubePlayer) {
         youTubePlayer.setOnFullscreenListener(new YouTubePlayer.OnFullscreenListener() {

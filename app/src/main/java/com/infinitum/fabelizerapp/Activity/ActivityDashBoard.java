@@ -1,7 +1,6 @@
 package com.infinitum.fabelizerapp.Activity;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,31 +12,30 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.infinitum.fabelizerapp.Activity.ActivityLogin;
 import com.infinitum.fabelizerapp.Adapter.NavigationDrawerAdapter;
 import com.infinitum.fabelizerapp.CustomView.CustomEditText;
+import com.infinitum.fabelizerapp.CustomView.CustomTextView;
 import com.infinitum.fabelizerapp.DataClass.DataClass;
-import com.infinitum.fabelizerapp.FragmentHome;
+import com.infinitum.fabelizerapp.Fragments.FragmentHome;
+import com.infinitum.fabelizerapp.Fragments.FragmentListYouTube;
+import com.infinitum.fabelizerapp.Fragments.FragmentMedia;
+import com.infinitum.fabelizerapp.Fragments.FragmentSlider;
 import com.infinitum.fabelizerapp.R;
 import com.infinitum.fabelizerapp.SessionClass.SessionClass;
 import com.infinitum.fabelizerapp.Utils.MyActivity;
@@ -57,23 +55,25 @@ public class ActivityDashBoard extends MyActivity implements View.OnClickListene
     private ArrayList<DataClass> mArraylist;
     private DrawerLayout mDrawerLayout;
     private ImageView mImgNavIcon,mImgNavIcon1,mImgAdd,mImgSrch,mImgAscDesc,mImgMail,mImgCamera,mImgCross;
-    private TextView mTxtViewTitle,mTxtfilter,mTxtName;
+    private CustomTextView mTxtViewTitle,mTxtfilter,mTxtName;
     private CustomEditText mEdtSearch;
     private LinearLayout mLinearSrch;
     private CircleImageView mImgprofile;
-    private LinearLayout mReldash;
+    private RelativeLayout mReldash;
     private String app_version_name,Version_name;
     private Bitmap mBmp;
 
-//    private int[] ic_sales = {
-//            R.drawable.ic_home,//0
-//            R.drawable.nav_my_booking,//2
-//            R.drawable.nav_prospects,//1
-//            R.drawable.nav_prospects,//1
-//            R.drawable.nav_cloud_sync,//3
-//            R.drawable.nav_tools,//4
-//            R.drawable.nav_logout,//6
-//    };
+    private int[] ic_fabelizer = {
+            R.drawable.ic_home,//0
+            R.drawable.ic_bench,//1
+            R.drawable.ic_media,//2
+            R.drawable.ic_referrences,//3
+            R.drawable.ic_skin,//4
+            R.drawable.ic_lang,//5
+            R.drawable.ic_prof,//6
+            R.drawable.ic_download,//7
+            R.drawable.ic_logout,//8
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,19 +86,20 @@ public class ActivityDashBoard extends MyActivity implements View.OnClickListene
 
 
         mLstView=(ListView)findViewById(R.id.lv_drawer);
-        mReldash=(LinearLayout)findViewById(R.id.rel_dash);
+        mReldash=(RelativeLayout)findViewById(R.id.rel_dash);
+        mTxtViewTitle=(CustomTextView) findViewById(R.id.txt_title) ;
         mLstView.setOnItemClickListener(this);
         mArraylist=new ArrayList<>();
         mDrawerLayout=(DrawerLayout)findViewById(R.id.drawer_layout);
         mImgNavIcon=(ImageView)findViewById(R.id.img_menu);
         mImgprofile=(CircleImageView)findViewById(R.id.img_profile_view);
 //            mTxtViewTitle=(TextView)findViewById(R.id.txt_prof_name);
-        mTxtName=(TextView)findViewById(R.id.txt_name);
+        mTxtName=(CustomTextView) findViewById(R.id.txt_name);
         mImgCamera=(ImageView)findViewById(R.id.img_camera_dashboard);
         mImgCamera.setOnClickListener(this);
         mImgNavIcon.setOnClickListener(this);
         mImgprofile.setOnClickListener(this);
-        mTxtName.setText("");
+        mTxtViewTitle.setText("");
 //
 //        Intent intent=new Intent(ActivityDashBoard.this, MainActivity.class);
 //        startActivity(intent);
@@ -129,13 +130,13 @@ public class ActivityDashBoard extends MyActivity implements View.OnClickListene
         int[] arr_icons = null;
 //        if (!SessionClass.getUserId(ActivityDashBoard.this).equalsIgnoreCase("") ) {
             arr_menu = getResources().getStringArray(R.array.str_array_fabelizer);
-//            arr_icons = ic_sales;
+            arr_icons = ic_fabelizer;
 //        }
         mArraylist.clear();
         for (int i = 0; arr_menu != null && i < arr_menu.length; i++) {
             DataClass item = new DataClass();
             item.setMstrNavTitle(arr_menu[i]);
-//            item.setmStrNavIcon(arr_icons[i]);
+            item.setmStrNavIcon(arr_icons[i]);
             mArraylist.add(item);
         }
         mLstView.setAdapter(new NavigationDrawerAdapter(ActivityDashBoard.this, mArraylist));
@@ -300,13 +301,15 @@ public class ActivityDashBoard extends MyActivity implements View.OnClickListene
 
         switch (position) {
             case 0:
-//                fragmentClass = FragmentHome.class;
-                Intent intent=new Intent(ActivityDashBoard.this, MainActivity.class);
-                startActivity(intent);
+                fragment = new FragmentSlider();
+//                Intent intent=new Intent(ActivityDashBoard.this, MainActivity.class);
+//                startActivity(intent);
                 break;
             case 1:
+                fragment = new FragmentListYouTube();
                 break;
             case 2:
+                fragment = new FragmentMedia();
                 break;
             case 3:
                 break;
@@ -361,10 +364,10 @@ public class ActivityDashBoard extends MyActivity implements View.OnClickListene
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-//            ft.replace(R.id.content_frame, fragment).addToBackStack("").commit();
-//            getFragmentManager().getBackStackEntryCount();
+//            FragmentManager fragmentManager = getSupportFragmentManager();
+//            fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
+            ft.replace(R.id.content_frame, fragment).addToBackStack("").commit();
+            getFragmentManager().getBackStackEntryCount();
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.infinitum.fabelizerapp;
+package com.infinitum.fabelizerapp.Fragments;
 
 import android.content.Context;
 import android.content.pm.ActivityInfo;
@@ -20,6 +20,9 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerFragment;
 import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 import com.google.android.youtube.player.YouTubePlayerView;
+import com.infinitum.fabelizerapp.Config;
+import com.infinitum.fabelizerapp.CustomView.CustomTextView;
+import com.infinitum.fabelizerapp.R;
 import com.infinitum.fabelizerapp.Utils.FullScreenHelper;
 import com.infinitum.fabelizerapp.Utils.MyFragment;
 
@@ -43,6 +46,7 @@ public class FragmentHome extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        ((CustomTextView)getActivity().findViewById(R.id.txt_title)).setText("HOME");
         // Initializing YouTube player view
 //        youTubePlayerView = (YouTubePlayerView) view.findViewById(R.id.youtube_view);
         YouTubePlayerSupportFragment youTubePlayerFragment = YouTubePlayerSupportFragment.newInstance();

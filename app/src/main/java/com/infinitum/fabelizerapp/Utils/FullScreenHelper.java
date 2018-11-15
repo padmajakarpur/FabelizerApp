@@ -1,11 +1,7 @@
 package com.infinitum.fabelizerapp.Utils;
 
-import android.app.Activity;
 import android.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.View;
-
-import com.infinitum.fabelizerapp.FragmentHome;
 
 /**
  * Class responsible for changing the view from full screen to non-full screen and vice versa.

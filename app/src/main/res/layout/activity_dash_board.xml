@@ -7,18 +7,30 @@
     android:background="#fff"
     android:orientation="vertical"
     >
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/rel_dash"
         android:orientation="horizontal"
         android:layout_width="match_parent"
+        android:background="@color/bg_tabs"
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/img_menu"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_menu"/>
+        <com.infinitum.fabelizerapp.CustomView.CustomTextView
+            android:id="@+id/txt_title"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:clickable="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:textColor="@color/white"
+            />
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer_layout"
@@ -45,11 +57,12 @@
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:gravity="center"
-                android:layout_marginTop="10dp"
+                android:background="@color/white"
                 android:orientation="vertical"
                 >
                 <RelativeLayout
                     android:layout_width="wrap_content"
+                    android:layout_marginTop="7dp"
                     android:layout_height="wrap_content">
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/img_profile_view"
@@ -60,23 +73,23 @@
                         app:civ_border_width="1dp" />
                     <ImageView
                         android:id="@+id/img_camera_dashboard"
-                        android:layout_width="30dp"
+                        android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_alignRight="@+id/img_profile_view"
                         android:layout_alignBottom="@+id/img_profile_view"
                         android:src="@drawable/ic_menu_camera"/>
                 </RelativeLayout>
 
 
-                <TextView
+                <com.infinitum.fabelizerapp.CustomView.CustomTextView
                     android:textSize="20sp"
-                    android:layout_marginTop="10dp"
+                    android:layout_margin="5dp"
                     android:clickable="false"
                     android:id="@+id/txt_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Name "
+                    android:text="abc@gmail.com "
                     android:layout_centerInParent="true"
                     android:textColor="@color/black"
                     />
@@ -91,10 +104,10 @@
                 android:id="@+id/lv_drawer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+
                 android:choiceMode="singleChoice"
-                android:divider="@android:color/darker_gray"
-                android:dividerHeight="0dp" />
+                android:divider="@color/light_gray"
+                android:dividerHeight="1dp" />
         </LinearLayout>
 
     </android.support.v4.widget.DrawerLayout>

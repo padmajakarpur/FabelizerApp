@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008080</color>
-    <color name="colorPrimaryDark">#008080</color>
-    <color name="colorAccent">#008080</color>
+    <color name="colorPrimary">#415dac</color>
+    <color name="colorPrimaryDark">#415dac</color>
+    <color name="colorAccent">#415dac</color>
 
     <color name="shadow">#555555</color>
     <color name="title">#777777</color>
+    <color name="bg_tabs">#FF363535</color>
 
 
 
@@ -93,6 +94,9 @@
         <color name="marketng">#008CCF</color>
         <color name="account">#006600</color>
         <color name="logout">#EEA1B423</color>
+
+    <color name="bg_btn">#14BBB4</color>
+    <color name="text">#1C4240</color>
 
     </resources>
 
